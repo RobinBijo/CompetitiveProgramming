@@ -1,5 +1,6 @@
-
-#Default Dict Problem
+'''
+DefaultDict
+'''
 from collections import defaultdict
 a, b = map(int, input().split())
 d = defaultdict(list)
@@ -16,3 +17,19 @@ for i in d['second']:
     if len(result) == 0:
         result.append(str(-1))
     print(' '.join(result))
+
+'''
+Named Tuple Program
+'''
+import math
+from collections import namedtuple
+N = int(input())
+columns = input().split()
+x = int(columns.index('MARKS'))
+sumy = 0
+for i in range(N):
+    rec = input().split()
+    mark = int(rec[x])
+    sumy+= mark
+avg = sumy/N
+print(round(avg,3))
